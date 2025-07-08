@@ -86,7 +86,7 @@ class _FlaskTestWidgetState extends State<FlaskTestWidget> {
   List<dynamic> _togetherSpans = [];
 
   Future<void> _sendToFlask() async {
-    final url = Uri.parse('http://localhost:5000/query');
+    final url = Uri.parse('https://binfin8-ai-hallucination-project.onrender.com/query');
     final prompt = _controller.text;
 
     try {
@@ -134,7 +134,7 @@ class _FlaskTestWidgetState extends State<FlaskTestWidget> {
   }
 
   Future<void> _generateImprovedQuery() async {
-    final url = Uri.parse('http://localhost:5000/improve_query');
+    final url = Uri.parse('https://binfin8-ai-hallucination-project.onrender.com/improve_query');
     final prompt = _controller.text;
     final response = await http.post(
       url,
@@ -150,7 +150,7 @@ class _FlaskTestWidgetState extends State<FlaskTestWidget> {
   }
 
   Future<void> _getUpdatedResponse() async {
-    final url = Uri.parse('http://localhost:5000/query');
+    final url = Uri.parse('https://binfin8-ai-hallucination-project.onrender.com/query');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/json'},
